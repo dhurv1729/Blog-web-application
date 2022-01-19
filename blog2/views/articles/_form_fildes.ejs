@@ -1,0 +1,30 @@
+
+<style>
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+</style>
+
+<div class="mt-4">
+  <label for="title"><h6>Title :</h6></label>
+  <input required type="text" value="<%= article.title %>" name="title" id="title" 
+  style="width: 100%; padding: 4px; border-radius: 4px;">
+</div>
+<div class="form-group mt-4">
+  <label for="description"><h6>Description :</h6></label>
+  <textarea name="description" id="description" rows="6" cols="30"
+  style="width: 100%;"><%= article.description %></textarea>
+</div>
+<div class="form-group mt-4">
+  <label for="markdown"><h6>Content :</h6></label>
+  <textarea required name="markdown" id="markdown" style="width: 100%;" rows="20" cols="30"><%= article.markdown %></textarea>
+</div>
+
+<div class="buttons">
+  <a href="/" class="btn btn-secondary mt-4">Cancel</a>
+  <button type="submit" class="btn btn-primary mt-4" formaction="/articles/preview">Preview</button>
+  <button type="submit" class="btn btn-success mt-4">Post</button>
+</div>
+
